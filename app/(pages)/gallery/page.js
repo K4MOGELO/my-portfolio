@@ -1,5 +1,73 @@
 import React from "react";
 
 export default function page() {
-  return <div>gallery</div>;
+  return (
+    <div>
+      <h1>1</h1>
+      <h1>2</h1>
+      <h1>3</h1>
+
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+      <h1>gallery</h1>
+    </div>
+  );
 }
