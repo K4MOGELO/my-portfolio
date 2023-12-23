@@ -53,24 +53,29 @@ export default function Navbar() {
   return (
     <div
       className={clsx(
-        "w-full bg-black fixed flex space-x-1  flex-col items-center",
+        "w-full bg-[#111010]  fixed flex space-x-1  flex-col items-center transition-all duration-200 transform",
         {
           "p-4 ": isScrollingUp,
           "p-2": !isScrollingUp,
         }
       )}
     >
-      <h1 className="text-3xl">
+      <h1 className="text-4xl">
         {activeLink === "/"
-          ? "HOME"
-          : navLinks.find((link) => link.href === activeLink)?.text}
+          ? "KAMOGELO SITHOLE"
+          : navLinks
+              .find((link) => link.href === activeLink)
+              ?.text.toUpperCase()}
       </h1>
 
       <div
-        className={clsx("  w-full flex justify-center space-x-2 p-2  ", {
-          block: isScrollingUp,
-          hidden: !isScrollingUp,
-        })}
+        className={clsx(
+          "  w-full flex justify-center space-x-2 p-2  transition-all duration-300 transform ",
+          {
+            block: isScrollingUp,
+            hidden: !isScrollingUp,
+          }
+        )}
       >
         {navLinks.map((link) => (
           <Link key={link.href} href={link.href}>
