@@ -15,7 +15,7 @@ export default function Home() {
         <h1 className="text-center">Kamogelo Sithole</h1>
       </div>
       <div className="flex flex-col  items-center  space-y-6 ">
-        <h1>hey, I'm Kamogelo 👋</h1>
+        <h1>hey, Im Kamogelo 👋</h1>
         <h1>
           Im Patryk, a product designer and design system specialist from Poland
           with over 9 years of experience focusing on user experience and design
