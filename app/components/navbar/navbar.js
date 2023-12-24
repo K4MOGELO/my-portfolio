@@ -5,11 +5,11 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const navLinks = [
-  { text: "Home", href: "/" },
-  { text: "Skills", href: "/skills" },
-  { text: "Gallery", href: "/gallery" },
-  { text: "Posts", href: "/posts" },
-  { text: "About", href: "/about" },
+  { text: "home", href: "/" },
+  { text: "projects", href: "/projects" },
+  { text: "posts", href: "/posts" },
+  { text: "gallery", href: "/gallery" },
+  { text: "about", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -53,14 +53,14 @@ export default function Navbar() {
   return (
     <div
       className={clsx(
-        "w-full bg-[#111010]  fixed flex space-x-1  flex-col items-center transition-all duration-200 transform",
+        "w-full bg-black  fixed  transition-all duration-200 transform",
         {
-          "p-4 ": isScrollingUp,
-          "p-2": !isScrollingUp,
+          "py-4 ": isScrollingUp,
+          "py-2": !isScrollingUp,
         }
       )}
     >
-      <h1 className="text-4xl">
+      <h1 className="text-4xl text-center ">
         {activeLink === "/"
           ? "KAMOGELO SITHOLE"
           : navLinks
@@ -69,18 +69,15 @@ export default function Navbar() {
       </h1>
 
       <div
-        className={clsx(
-          "  w-full flex justify-center space-x-2 p-2  transition-all duration-300 transform ",
-          {
-            block: isScrollingUp,
-            hidden: !isScrollingUp,
-          }
-        )}
+        className={clsx("   flex   space-x-2  justify-center text-sm  ", {
+          block: isScrollingUp,
+          hidden: !isScrollingUp,
+        })}
       >
         {navLinks.map((link) => (
           <Link key={link.href} href={link.href}>
             <p
-              className={clsx({ "border-b": pathname === link.href })}
+              className={clsx({ "border-b ": pathname === link.href })}
               onClick={() => handleLinkClick(link.href)}
             >
               {link.text}
