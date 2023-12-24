@@ -23,7 +23,7 @@ export default function Post() {
       </div>
       <CardContent className="prose prose-gray mx-auto dark:prose-invert">
         <p>
-          Exciting news! I've accepted a new role at Google as a Senior Software
+          Exciting news! Ive accepted a new role at Google as a Senior Software
           Engineer. I am thrilled to join this innovative team and looking
           forward to contributing to some amazing projects!
         </p>

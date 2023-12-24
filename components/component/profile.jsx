@@ -61,7 +61,8 @@ export function Profile() {
         </CardHeader>
         <CardContent>
           <h3 className="font-semibold">
-            Bachelor's in Mathematical Sciences -Applied Math & Comp Science
+            Bachelor&apos;s in Mathematical Sciences -Applied Math & Comp
+            Science
           </h3>
           <p className="text-gray-500">University OF Limpopo, 2018 - 2020</p>
         </CardContent>
@@ -78,7 +79,8 @@ export function Profile() {
           <h3 className="font-semibold">Software Engineer, Google</h3>
           <p className="text-gray-500">2020 - Present</p>
           <p>
-            Working on the development of Google's core search functionality.
+            Working on the development of Google&apos;s core search
+            functionality.
           </p>
         </CardContent>
         <CardContent>
