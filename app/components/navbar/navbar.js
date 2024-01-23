@@ -6,6 +6,7 @@ import clsx from "clsx";
 
 const navLinks = [
   { text: "home", href: "/" },
+
   { text: "projects", href: "/projects" },
   { text: "posts", href: "/posts" },
   { text: "gallery", href: "/gallery" },
@@ -55,8 +56,8 @@ export default function Navbar() {
       className={clsx(
         "w-full bg-black  fixed  transition-all duration-200 transform",
         {
-          "py-4 ": isScrollingUp,
-          "py-2": !isScrollingUp,
+          "py-5 ": isScrollingUp,
+          "py-4": !isScrollingUp,
         }
       )}
     >

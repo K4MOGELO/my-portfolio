@@ -35,15 +35,21 @@ export function Profile() {
           </div>
         </div>
       </div>
+
       <Card className="w-full max-w-2xl">
         <CardHeader>
           <CardTitle>About Me</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
           <p>
-            Passionate software engineer with over 7 years of experience in
-            developing robust and scalable applications. Specializes in backend
-            development, with extensive knowledge in Python, Java, and Node.js.
+            I'm currently a final-year student at the University of Limpopo,
+            pursuing a BSc in Mathematical Sciences with a focus on computer
+            sciences and applied mathematics. With a passion for web
+            development, I've mastered JavaScript and its libraries like React,
+            along with frameworks like Next.js. My journey into the Linux world
+            has honed my scripting skills in languages like Bash and Python.
+            Recently, I've delved into the fascinating world of supercomputing,
+            gaining valuable insights into the field.
           </p>
           <h3 className="font-semibold">Skills</h3>
           <div className="flex gap-2">
@@ -57,72 +63,69 @@ export function Profile() {
       </Card>
       <Card className="w-full max-w-2xl">
         <CardHeader>
-          <CardTitle>Education</CardTitle>
+          <CardTitle>Projects</CardTitle>
         </CardHeader>
         <CardContent>
-          <h3 className="font-semibold">
-            Bachelor&apos;s in Mathematical Sciences -Applied Math & Comp
-            Science
-          </h3>
-          <p className="text-gray-500">University OF Limpopo, 2018 - 2020</p>
-        </CardContent>
-        <CardContent>
-          <h3 className="font-semibold">Cyber Security Scholarship</h3>
-          <p className="text-gray-500">Ingressive for Good, 2023</p>
-        </CardContent>
-      </Card>
-      <Card className="w-full max-w-2xl">
-        <CardHeader>
-          <CardTitle>Experience</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <h3 className="font-semibold">Software Engineer, Google</h3>
-          <p className="text-gray-500">2020 - Present</p>
           <p>
-            Working on the development of Google&apos;s core search
-            functionality.
+            Explore some of my exciting projects that showcase my skills and
+            creativity. From web development to scripting and supercomputing,
+            each project has a unique story to tell.
           </p>
-        </CardContent>
-        <CardContent>
-          <div className="absolute blur">
-            <h3 className="font-semibold">
-              Software Engineering Intern, Microsoft
-            </h3>
-            <p className="text-gray-500">Summer 2018</p>
-            <p>
-              Worked on enhancing the user experience for Microsoft Office
-              Suite.
-            </p>
+
+          <div className="py-4">
+            <h1> some of my latests projects</h1>
+            <div className="space-y-2 flex flex-col">
+              <Link href="/projects">
+                <div className="bg-[#262626] rounded-sm py-2 ">
+                  <div className="p-2">
+                    <h1 className="">MY PROJECT BLUH BLUH BLUH</h1>
+                    <h1 className="text-sm ">react and firebase</h1>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/projects">
+                <div className="bg-[#262626] rounded-sm py-2 ">
+                  <div className="p-2">
+                    <h1 className="">MY PROJECT BLUH BLUH BLUH</h1>
+                    <h1 className="text-sm ">react and firebase</h1>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
-          <div className="p-4 relative z-10 text-white text-center">
-            <h1 className="text-4xl font-bold">Adding more Soon</h1>
-          </div>
+
+          <Link href="/projects">
+            <h1 className="pt-2">View all projects</h1>
+          </Link>
         </CardContent>
       </Card>
 
       <Card className="w-full max-w-2xl">
         <CardHeader>
-          <CardTitle>Projects</CardTitle>
+          <CardTitle>More ....</CardTitle>
         </CardHeader>
         <CardContent>
-          <h3 className="font-semibold">Project Management Tool</h3>
-          <p>
-            A tool to manage software development projects, built with Django
-            and React.
+          <h3 className="font-semibold text-lg">Making a Difference</h3>
+          <p className="">
+            Beyond coding, I'm actively involved in initiatives that give back
+            to society. Co-founding the UL Dev Society is one such endeavor,
+            helping students at my university gain insights into future careers.
           </p>
-          <Button variant="link">Learn more</Button>
         </CardContent>
         <CardContent>
-          <h3 className="font-semibold">E-commerce Store</h3>
-          <p>An e-commerce store built with Node.js and React.</p>
-          <Button variant="link">Learn more</Button>
+          <h3 className="font-semibold text-lg">Get in Touch</h3>
+          <p className="">
+            Ready to collaborate or have a question? Whether you want to hire
+            me, collaborate on a project, or just have a chat, I'm just a
+            message away. Let's create something awesome together!
+          </p>
         </CardContent>
       </Card>
+
       <div className="flex flex-col items-center gap-4">
-        <Button className="w-full max-w-md" variant="outline">
-          Download Resume
+        <Button className="w-full max-w-md">
+          Hire Me | Contact Me | Collaborate
         </Button>
-        <Button className="w-full max-w-md">Contact Me</Button>
       </div>
     </main>
   );
@@ -208,4 +211,29 @@ function InstagramIcon(props) {
       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
     </svg>
   );
+}
+
+{
+  /* <Card className="w-full max-w-2xl">
+  <CardHeader>
+    <CardTitle>Experience</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <h3 className="font-semibold">Software Engineer, Google</h3>
+    <p className="text-gray-500">2020 - Present</p>
+    <p>
+      Working on the development of Google&apos;s core search functionality.
+    </p>
+  </CardContent>
+  <CardContent>
+    <div className="absolute blur">
+      <h3 className="font-semibold">Software Engineering Intern, Microsoft</h3>
+      <p className="text-gray-500">Summer 2018</p>
+      <p>Worked on enhancing the user experience for Microsoft Office Suite.</p>
+    </div>
+    <div className="p-4 relative z-10 text-white text-center">
+      <h1 className="text-4xl font-bold">Adding more Soon</h1>
+    </div>
+  </CardContent>
+</Card>; */
 }
