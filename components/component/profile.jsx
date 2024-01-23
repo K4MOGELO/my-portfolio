@@ -42,15 +42,16 @@ export function Profile() {
         </CardHeader>
         <CardContent className="space-y-2">
           <p>
-            I'm currently a final-year student at the University of Limpopo,
-            pursuing a BSc in Mathematical Sciences with a focus on computer
-            sciences and applied mathematics. With a passion for web
-            development, I've mastered JavaScript and its libraries like React,
-            along with frameworks like Next.js. My journey into the Linux world
-            has honed my scripting skills in languages like Bash and Python.
-            Recently, I've delved into the fascinating world of supercomputing,
-            gaining valuable insights into the field.
+            I&rsquo;m currently a final-year student at the University of
+            Limpopo, pursuing a BSc in Mathematical Sciences with a focus on
+            computer sciences and applied mathematics. With a passion for web
+            development, I&rsquo;ve mastered JavaScript and its libraries like
+            React, along with frameworks like Next.js. My journey into the Linux
+            world has honed my scripting skills in languages like Bash and
+            Python. Recently, I&rsquo;ve delved into the fascinating world of
+            supercomputing, gaining valuable insights into the field.
           </p>
+
           <h3 className="font-semibold">Skills</h3>
           <div className="flex gap-2">
             <Badge>Python</Badge>
@@ -107,17 +108,18 @@ export function Profile() {
         <CardContent>
           <h3 className="font-semibold text-lg">Making a Difference</h3>
           <p className="">
-            Beyond coding, I'm actively involved in initiatives that give back
-            to society. Co-founding the UL Dev Society is one such endeavor,
-            helping students at my university gain insights into future careers.
+            Beyond coding, I&rsquo;m actively involved in initiatives that give
+            back to society. Co-founding the UL Dev Society is one such
+            endeavor, helping students at my university gain insights into
+            future careers.
           </p>
         </CardContent>
         <CardContent>
           <h3 className="font-semibold text-lg">Get in Touch</h3>
           <p className="">
             Ready to collaborate or have a question? Whether you want to hire
-            me, collaborate on a project, or just have a chat, I'm just a
-            message away. Let's create something awesome together!
+            me, collaborate on a project, or just have a chat, I&rsquo;m just a
+            message away. Let&rsquo;s create something awesome together!
           </p>
         </CardContent>
       </Card>
