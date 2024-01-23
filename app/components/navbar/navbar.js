@@ -54,7 +54,7 @@ export default function Navbar() {
   return (
     <div
       className={clsx(
-        "w-full bg-black  fixed  transition-all duration-200 transform",
+        "w-full bg-black  fixed  transition-all duration-200 transform space-y-1",
         {
           "py-5 ": isScrollingUp,
           "py-4": !isScrollingUp,
