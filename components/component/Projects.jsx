@@ -52,48 +52,6 @@ export default function Projects() {
             </CardContent>
           </Link>
         </Card>
-        <Card>
-          <Link className="flex flex-col items-center" href="#">
-            <img
-              alt="Project 3"
-              className="w-full h-60 object-cover rounded-t-lg"
-              height="200"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "200/200",
-                objectFit: "cover",
-              }}
-              width="200"
-            />
-            <CardContent className="flex flex-col items-start gap-2 p-4">
-              <h3 className="font-semibold text-lg md:text-xl">Project 3</h3>
-              <Badge className="text-sm font-medium bg-red-500 text-white">
-                Ruby
-              </Badge>
-            </CardContent>
-          </Link>
-        </Card>
-        <Card>
-          <Link className="flex flex-col items-center" href="#">
-            <img
-              alt="Project 4"
-              className="w-full h-60 object-cover rounded-t-lg"
-              height="200"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "200/200",
-                objectFit: "cover",
-              }}
-              width="200"
-            />
-            <CardContent className="flex flex-col items-start gap-2 p-4">
-              <h3 className="font-semibold text-lg md:text-xl">Project 4</h3>
-              <Badge className="text-sm font-medium bg-yellow-500 text-white">
-                Java
-              </Badge>
-            </CardContent>
-          </Link>
-        </Card>
       </main>
     </div>
   );

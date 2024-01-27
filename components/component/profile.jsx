@@ -3,6 +3,7 @@ import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import BlogLink from "./lprojects";
 
 export function Profile() {
   return (
@@ -40,25 +41,32 @@ export function Profile() {
         <CardHeader>
           <CardTitle>About Me</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-2">
-          <p>
-            I&rsquo;m currently a final-year student at the University of
-            Limpopo, pursuing a BSc in Mathematical Sciences with a focus on
-            computer sciences and applied mathematics. With a passion for web
-            development, I&rsquo;ve mastered JavaScript and its libraries like
-            React, along with frameworks like Next.js. My journey into the Linux
-            world has honed my scripting skills in languages like Bash and
-            Python. Recently, I&rsquo;ve delved into the fascinating world of
-            supercomputing, gaining valuable insights into the field.
-          </p>
-
-          <h3 className="font-semibold">Skills</h3>
-          <div className="flex gap-2">
-            <Badge>Python</Badge>
-            <Badge>Java</Badge>
-            <Badge>Node.js</Badge>
-            <Badge>Django</Badge>
-            <Badge>React</Badge>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <p>
+              I&rsquo;m currently a final-year student at the University of
+              Limpopo, pursuing a BSc in Mathematical Sciences with a focus on
+              Computer Sciences and Applied Mathematics. With a passion for web
+              development
+            </p>
+            <p>
+              Proficient in JavaScript(React & Next.js), Bash, and Python, I
+              excel in web app development and system automation. Recently, I've
+              ventured into supercomputing, expanding my insights into
+              high-performance computing and its applications. My skills span
+              full stack development, scripting, and system optimization,
+              driving innovation in a dynamic digital landscape.
+            </p>
+          </div>
+          <div className="space-y-1">
+            <h3 className="font-semibold text-lg ">Skills</h3>
+            <div className="">
+              <Badge>C </Badge>
+              <Badge>Java</Badge>
+              <Badge>Node.js</Badge>
+              <Badge>Django</Badge>
+              <Badge>React</Badge>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -68,50 +76,51 @@ export function Profile() {
         </CardHeader>
         <CardContent>
           <p>
-            Explore some of my exciting projects that showcase my skills and
-            creativity. From web development to scripting and supercomputing,
-            each project has a unique story to tell.
+            Explore some of my exciting projects showcasing my skills and
+            creativity, each project having a unique story to tell.
           </p>
 
-          <div className="py-4">
-            <h1> some of my latests projects</h1>
-            <div className="space-y-2 flex flex-col">
-              <Link href="/projects">
-                <div className="bg-[#262626] rounded-sm py-2 ">
-                  <div className="p-2">
-                    <h1 className="">MY PROJECT BLUH BLUH BLUH</h1>
-                    <h1 className="text-sm ">react and firebase</h1>
-                  </div>
-                </div>
-              </Link>
-              <Link href="/projects">
-                <div className="bg-[#262626] rounded-sm py-2 ">
-                  <div className="p-2">
-                    <h1 className="">MY PROJECT BLUH BLUH BLUH</h1>
-                    <h1 className="text-sm ">react and firebase</h1>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
+          <div className="my-3">
+            <h1 className="text-gray-300 ">some of my latests projects...</h1>
 
-          <Link href="/projects">
-            <h1 className="pt-2">View all projects</h1>
-          </Link>
+            <div className="space-y-2 flex flex-col my-2">
+              <div className=" flex flex-col space-y-2 w-full">
+                <BlogLink
+                  name="Pro-Nav"
+                  description="web app to help students find accomodation"
+                />
+                <BlogLink
+                  name="This Website ,LOL"
+                  description="my personal website"
+                />
+              </div>
+            </div>
+            <Link href="/projects">
+              <h1 className="">View all projects</h1>
+            </Link>
+          </div>
         </CardContent>
       </Card>
 
       <Card className="w-full max-w-2xl">
         <CardHeader>
-          <CardTitle>More ....</CardTitle>
+          <CardTitle>More...</CardTitle>
         </CardHeader>
         <CardContent>
           <h3 className="font-semibold text-lg">Making a Difference</h3>
           <p className="">
-            Beyond coding, I&rsquo;m actively involved in initiatives that give
-            back to society. Co-founding the UL Dev Society is one such
-            endeavor, helping students at my university gain insights into
-            future careers.
+            Beyond coding, I&rsquo;m actively engaged in initiatives that
+            contribute to society. Co-founding the{" "}
+            <Link
+              href="https://uldevelopersociety.vercel.app/"
+              className="text-blue-500 hover:text-blue-700"
+            >
+              {" "}
+              UL Dev Society{" "}
+            </Link>
+            exemplifies this commitment, offering students at my university
+            valuable insights and resources as they navigate their educational
+            and professional journeys.
           </p>
         </CardContent>
         <CardContent>
@@ -214,6 +223,8 @@ function InstagramIcon(props) {
     </svg>
   );
 }
+
+
 
 {
   /* <Card className="w-full max-w-2xl">
