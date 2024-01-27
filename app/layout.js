@@ -9,7 +9,7 @@ export const metadata = {
   title: "SITHOLE K4MOGELO",
   description: "Personal Website",
 };
-// bg-[#111010]
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

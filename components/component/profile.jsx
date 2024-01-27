@@ -50,12 +50,10 @@ export function Profile() {
               development
             </p>
             <p>
-              Proficient in JavaScript(React & Next.js), Bash, and Python, I
-              excel in web app development and system automation. Recently,
-              I&rsquo;ve ventured into supercomputing, expanding my insights
-              into high-performance computing and its applications. My skills
-              span full stack development, scripting, and system optimization,
-              driving innovation in a dynamic digital landscape.
+              Proficient in full-stack development, scripting, and system
+              optimization — languages like JavaScript, Bash, and Python — I
+              drive innovation in web application development and automation
+              within the dynamic digital landscape.
             </p>
           </div>
           <div className="space-y-1">

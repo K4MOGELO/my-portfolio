@@ -16,7 +16,7 @@ export default function Projects() {
               alt="Project 1"
               className="w-full h-60 object-cover rounded-t-lg"
               height="200"
-              src="/placeholder.svg"
+              src={"images/projects/pronav.png"}
               style={{
                 aspectRatio: "200/200",
                 objectFit: "cover",
