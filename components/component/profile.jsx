@@ -51,10 +51,10 @@ export function Profile() {
             </p>
             <p>
               Proficient in JavaScript(React & Next.js), Bash, and Python, I
-              excel in web app development and system automation. Recently, I've
-              ventured into supercomputing, expanding my insights into
-              high-performance computing and its applications. My skills span
-              full stack development, scripting, and system optimization,
+              excel in web app development and system automation. Recently,
+              I&rsquo;ve ventured into supercomputing, expanding my insights
+              into high-performance computing and its applications. My skills
+              span full stack development, scripting, and system optimization,
               driving innovation in a dynamic digital landscape.
             </p>
           </div>
