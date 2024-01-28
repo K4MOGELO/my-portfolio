@@ -13,13 +13,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {" "}
-        <script
-          src="https://product-gallery.cloudinary.com/all.js"
-          type="text/javascript"
-        ></script>
-      </head>
       <body className={`${inter.className}   `}>
         <Navbar />
         <div className="p-14 "></div>

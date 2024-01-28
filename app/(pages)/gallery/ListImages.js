@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
 const imageUrls = [
@@ -53,7 +54,7 @@ export default function ListImages() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-7xl mx-auto p-4">
         {imageUrls.map((imageUrl, index) => (
           <div key={index} onClick={() => openFullscreen(index)}>
-            <img
+            <Image
               alt={`Gallery Image ${index + 1}`}
               className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800 transition-transform duration-200 "
               height="600"
@@ -67,13 +68,12 @@ export default function ListImages() {
       {fullscreenImage !== null && (
         <div
           onClick={closeFullscreen}
-          className="fixed top-0 left-0 w-full h-full bg-black  flex justify-center items-center"
+          className="fixed top-0 left-0 w-full h-full bg-black  flex justify-center items-center "
         >
           <div className="">
             <img
               alt={`Fullscreen Image ${currentIndex + 1}`}
               src={imageUrls[currentIndex]}
-              className=" "
             />
           </div>
         </div>
