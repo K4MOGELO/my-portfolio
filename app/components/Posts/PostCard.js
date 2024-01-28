@@ -10,7 +10,12 @@ export default function PostCard({ post }) {
   };
 
   return (
-    <div className="md:w-1/2 w-full p-4 border rounded-lg shadow-lg mb-4">
+    <div className="md:w-1/2 w-full p-4 border rounded-xl shadow-lg  mb-4">
+      {post.type === "repost" && (
+        <h1 className="text-sm text-center text-gray-600 ">
+          reposted From LinkedIn
+        </h1>
+      )}
       <div className=" border-gray-200 px-2">
         <div className="flex items-center justify-between space-x-4 my-2">
           <div className="flex items-center space-x-2">

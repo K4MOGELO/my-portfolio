@@ -51,31 +51,61 @@ const posts = [
   },
 ];
 
+const highlightsData = [
+  {
+    id: 1,
+    imageUrl:
+      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
+    title: "USA",
+  },
+  {
+    id: 2,
+    imageUrl:
+      "https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhulu.138888a5.png&w=640&q=55&dpl=dpl_8GwMoUquuZDTzrpBYQtfCiWSz8zU",
+    title: "RANDOM",
+  },
+  {
+    id: 1,
+    imageUrl:
+      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
+    title: "Highlight 1",
+  },
+  {
+    id: 1,
+    imageUrl:
+      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
+    title: "Highlight 1",
+  },
+  {
+    id: 1,
+    imageUrl:
+      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
+    title: "Highlight 1",
+  },
+  // Add more highlight objects as needed
+];
+
 export default function page() {
   return (
     <div className="md:justify-center flex flex-col items-center  ">
-      <div className="flex space-x-4 items-center  p-4  ">
-        <div className="font-semibold">Highlights</div>
+      <div className="flex space-x-4 items-center px-2 mb-3">
         <div className="flex space-x-4">
-          <div className=" justify-center items-center rounded-full flex flex-col ">
-            <img
-              src="https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg"
-              alt="highlight"
-              className="h-16 w-16 rounded-full border-2 border-double border-gray-200 "
-            />
-            <p className="text-sm">Highlight 1</p>
-          </div>
-          <div className=" justify-center items-center rounded-full flex flex-col ">
-            <img
-              src="https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg"
-              alt="highlight"
-              className="h-16 w-16 rounded-full border-2 border-double border-gray-200 "
-            />
-            <p className="text-sm">Highlight 2</p>
-          </div>
+          {highlightsData.map((highlight) => (
+            <div
+              key={highlight.id}
+              className="space-y-2 justify-center items-center rounded-full flex flex-col"
+            >
+              <img
+                src={highlight.imageUrl}
+                alt={highlight.title}
+                className="h-20 w-20 rounded-full border-2 border-double border-gray-200"
+              />
+              <p className="text-sm">{highlight.title}</p>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="md:justify-center flex-col items-center flex p-4">
+      <div className="md:justify-center flex-col items-center flex px-4">
         {posts.map((post, index) => (
           <PostCard post={post} key={index} />
         ))}
