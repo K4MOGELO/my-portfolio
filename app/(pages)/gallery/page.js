@@ -3,7 +3,7 @@ import ListImages from "./ListImages";
 
 export default function page() {
   return (
-    <div>
+    <div className="">
       <ListImages />
     </div>
   );

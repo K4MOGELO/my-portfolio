@@ -6,8 +6,8 @@ import Footer from "./components/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SITHOLE K4MOGELO",
-  description: "Personal Website",
+  title: "SITHOLE KAMOGELO",
+  description: "K4MOGELO",
 };
 
 export default function RootLayout({ children }) {
@@ -15,8 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className}   `}>
         <Navbar />
-        <div className="p-14 "></div>
-        <div className="">{children}</div>
+
+        <div className="min-h-screen">
+          <div className="p-14 "></div>
+          {children}
+        </div>
         <div className="fixed bottom-4 right-4 text-white cursor-help">
           <span
             className=" space-x-1  border-b border-dashed border-white"
