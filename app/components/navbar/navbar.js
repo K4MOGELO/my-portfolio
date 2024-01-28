@@ -14,8 +14,8 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [activeLink, setActiveLink] = useState("/");
   const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState(pathname);
 
   const handleLinkClick = (href) => {
     setActiveLink(href);

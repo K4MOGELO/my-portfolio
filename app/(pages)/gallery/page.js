@@ -1,9 +1,10 @@
 import React from "react";
+import ListImages from "./ListImages";
 
 export default function page() {
   return (
     <div>
-      <h1>images</h1>
+      <ListImages />
     </div>
   );
 }

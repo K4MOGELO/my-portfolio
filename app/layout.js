@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from "./components/navbar/navbar";
-
+import Footer from "./components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {" "}
+        <script
+          src="https://product-gallery.cloudinary.com/all.js"
+          type="text/javascript"
+        ></script>
+      </head>
       <body className={`${inter.className}   `}>
         <Navbar />
         <div className="p-14 "></div>
@@ -25,6 +32,7 @@ export default function RootLayout({ children }) {
             Website in <span className="text-yellow-500">Beta Mode</span>{" "}
           </span>
         </div>
+        <Footer />
       </body>
     </html>
   );

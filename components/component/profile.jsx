@@ -130,12 +130,6 @@ export function Profile() {
           </p>
         </CardContent>
       </Card>
-
-      <div className="flex flex-col items-center gap-4">
-        <Button className="w-full max-w-md">
-          Hire Me | Contact Me | Collaborate
-        </Button>
-      </div>
     </main>
   );
 }

@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+module.exports = {
+  images: {
+    domains: ["res.cloudinary.com"],
+  },
+  cloudinary: {
+    cloudName: "dnp6z6i4u",
+    uploadPreset: "your-upload-preset",
+  },
+};
