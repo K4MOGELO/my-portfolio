@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -6,13 +7,15 @@ const ImageSlider = ({ images }) => {
   return (
     <div className="w-full max-w-screen-lg mx-auto">
       {images.length > 0 ? (
-        <Carousel showThumbs={false}>
+        <Carousel showThumbs={false} swipeable={false}>
           {images.map((imageUrl, index) => (
             <div key={index}>
-              <img
+              <Image
+                alt={`Gallery Image ${index + 1}`}
+                className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800 transition-transform duration-200 "
+                height="600"
                 src={imageUrl}
-                alt={`post image ${index}`}
-                className="w-full max-h-96 object-contain"
+                width="600"
               />
             </div>
           ))}
