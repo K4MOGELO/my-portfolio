@@ -91,7 +91,9 @@ export default function PostCard({ post }) {
         {/* {post.mainImageUrl && (
           <img src={post.mainImageUrl} alt={`post image`} className="" />
         )} */}
-        <ImageSlider images={post.imageUrls} />
+        <div>
+          <ImageSlider images={post.imageUrls} />
+        </div>
 
         {/* <div className="flex flex-col">
           {post.imageUrls.map((imageUrl, index) => (
