@@ -93,9 +93,6 @@ export default function PostCard({ post }) {
           </div>
         )}
 
-        {/* {post.mainImageUrl && (
-          <img src={post.mainImageUrl} alt={`post image`} className="" />
-        )} */}
         <div>
           <ImageSlider images={post.imageUrls} />
         </div>

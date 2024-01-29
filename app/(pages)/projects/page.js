@@ -5,22 +5,24 @@ import React from "react";
 export default function page() {
   const projects = [
     {
-      name: "E-commerce Website",
-      image: "https://randomuser.me/api/portraits/men/1.jpg",
-      description: "A full-stack e-commerce website built using MERN stack.",
-      languages: ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      name: "Personalised Website",
+
+      image: "/images/projects/website.png",
+      description: "My portfolio,showcasing my skills,projects and experience",
+      languages: ["NextJs"],
     },
     {
-      name: "Task Manager App",
-      image: "https://randomuser.me/api/portraits/women/2.jpg",
-      description: "A task manager application built with React and Firebase.",
-      languages: ["JavaScript", "React", "Firebase"],
-    },
-    {
-      name: "Weather App",
-      image: "https://randomuser.me/api/portraits/men/3.jpg",
+      name: "Proparty Navigator(ProNav)",
+      image: "/images/projects/pronav.png",
       description:
-        "A simple weather application developed using Vue.js and OpenWeather API.",
+        "Web apllication to help students find  accomodation at university of limpopo showing all the prices and images4",
+      languages: ["NextJS", "Firebase", "Clerk"],
+    },
+    {
+      name: "Campus Connect",
+      image: "/images/projects/campusconnect.png",
+      description:
+        "All in one website to help freshers find their way around the campus and get access to all services ",
       languages: ["JavaScript", "Vue.js"],
     },
   ];
@@ -52,7 +54,7 @@ const ProjectCard = ({ image, name, description, languages }) => {
       <div className="flex flex-col justify-between">
         <div>
           <h2 className="text-xl font-semibold mb-2">{name}</h2>
-          <p className="text-gray-600 mb-4">{description}</p>
+          <p className="text-gray-600 mb-4">{description.slice(0, 70)}...</p>
         </div>
         <div className="flex flex-wrap">
           {languages.map((language, index) => (

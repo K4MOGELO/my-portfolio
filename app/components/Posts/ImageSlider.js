@@ -2,7 +2,6 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 const ImageSlider = ({ images }) => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);

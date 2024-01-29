@@ -54,21 +54,19 @@ const posts = [
 const highlightsData = [
   {
     id: 1,
-    imageUrl:
-      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
-    title: "USA",
+    name: "",
+    imageUrl: "/images/posts/image1.jpg",
+    title: "HPC",
   },
   {
     id: 2,
-    imageUrl:
-      "https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhulu.138888a5.png&w=640&q=55&dpl=dpl_8GwMoUquuZDTzrpBYQtfCiWSz8zU",
-    title: "RANDOM",
+    imageUrl: "/images/posts/usa.png",
+    title: "USA",
   },
   {
     id: 1,
-    imageUrl:
-      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
-    title: "Highlight 1",
+    imageUrl: "/images/posts/jaden.jpg",
+    title: "Untitled",
   },
   {
     id: 1,
