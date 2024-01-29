@@ -98,7 +98,7 @@ export default function page() {
               <img
                 src={highlight.imageUrl}
                 alt={highlight.title}
-                className="h-20 w-20 rounded-full border-2 border-double border-gray-200"
+                className="h-16 w-16 rounded-full border-2 border-double border-gray-200"
               />
               <p className="text-sm">{highlight.title}</p>
             </div>

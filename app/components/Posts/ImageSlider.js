@@ -66,12 +66,12 @@ const ImageSlider = ({ images }) => {
       {fullscreenImage !== null && (
         <div
           onClick={closeFullscreen}
-          className="fixed top-0 left-0 w-full h-full bg-black z-50 flex justify-center items-center"
+          className="fixed top-0 left-0 w-full h-full bg-black z-50 flex justify-center "
         >
           <img
             alt={`Fullscreen Image ${currentIndex + 1}`}
             src={images[currentIndex]}
-            className="object-cover"
+            className="object-contain"
           />
         </div>
       )}
