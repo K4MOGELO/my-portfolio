@@ -56,7 +56,7 @@ export default function ListImages() {
           <div key={index} onClick={() => openFullscreen(index)}>
             <Image
               alt={`Gallery Image ${index + 1}`}
-              className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800 transition-transform duration-200 "
+              className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden  transition-transform duration-200 "
               height="600"
               src={imageUrl}
               width="600"
