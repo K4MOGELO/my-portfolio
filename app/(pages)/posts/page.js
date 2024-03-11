@@ -1,6 +1,9 @@
+"use client";
+import ImageSlider from "@/app/components/Posts/ImageSlider";
 import LinkedIn from "@/app/components/Posts/LinkedIn";
 import PostCard from "@/app/components/Posts/PostCard";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import StoryHighlight from "../test/StoryHightlight.";
 const posts = [
   {
     type: "status",
@@ -50,46 +53,176 @@ const posts = [
     ],
   },
 ];
+const burakHeading = {
+  heading: "K4MOGELO",
+  subheading: "16 february 2022",
+  profileImage: "/images/gallery/image4.jpg",
+};
 
-const highlightsData = [
+const highlightData = [
   {
     id: 1,
     name: "",
     imageUrl: "/images/posts/image1.jpg",
     title: "HPC",
+    stories: [
+      {
+        url: "/images/gallery/image4.jpg",
+        type: "image",
+        header: burakHeading,
+        seeMore: ({ close }) => {
+          return <div onClick={close}>Hello, click to close this.</div>;
+        },
+      },
+      {
+        url: "https://i.imgur.com/LBRXhIq.jpg",
+        type: "image",
+        header: burakHeading,
+      },
+    ],
   },
   {
     id: 2,
     imageUrl: "/images/posts/usa.png",
     title: "USA",
+    stories: [
+      {
+        url: "https://i.imgur.com/Zo5Kpnd.mp4",
+        type: "video",
+        header: burakHeading,
+      },
+      {
+        url: "https://i.imgur.com/LBRXhIq.jpg",
+        type: "image",
+        header: burakHeading,
+      },
+      {
+        url: "https://i.imgur.com/ARMxyC4.png",
+        type: "image",
+        header: burakHeading,
+      },
+    ],
   },
   {
-    id: 1,
+    id: 3,
     imageUrl: "/images/posts/jaden.jpg",
     title: "Untitled",
+    stories: [
+      {
+        url: "https://i.imgur.com/in5Jr1h.jpg",
+        type: "image",
+        header: burakHeading,
+        seeMore: true,
+        duration: 1500,
+        seeMore: ({ close }) => {
+          return <div onClick={close}>Hello, click to close this.</div>;
+        },
+      },
+      {
+        url: "/images/gallery/image4.jpg",
+        type: "image",
+        header: burakHeading,
+        seeMore: ({ close }) => {
+          return <div onClick={close}>Hello, click to close this.</div>;
+        },
+      },
+      {
+        url: "https://i.imgur.com/Zo5Kpnd.mp4",
+        type: "video",
+        header: burakHeading,
+      },
+      {
+        url: "https://i.imgur.com/LBRXhIq.jpg",
+        type: "image",
+        header: burakHeading,
+      },
+      {
+        url: "https://i.imgur.com/ARMxyC4.png",
+        type: "image",
+        header: burakHeading,
+      },
+    ],
   },
   {
-    id: 1,
+    id: 4,
     imageUrl:
       "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
     title: "Highlight 1",
+    stories: [
+      {
+        url: "https://i.imgur.com/in5Jr1h.jpg",
+        type: "image",
+        header: burakHeading,
+        seeMore: true,
+        duration: 1500,
+        seeMore: ({ close }) => {
+          return <div onClick={close}>Hello, click to close this.</div>;
+        },
+      },
+
+      {
+        url: "/testvid.mp4",
+        type: "video",
+        header: burakHeading,
+      },
+    ],
   },
-  {
-    id: 1,
-    imageUrl:
-      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
-    title: "Highlight 1",
-  },
+  // {
+  //   id: 5,
+  //   imageUrl:
+  //     "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
+  //   title: "Highlight 2",
+  //   stories: [
+  //     {
+  //       url: "https://yt3.googleusercontent.com/ytc/AIdro_ns8epNsONIEqqJ-ICBD55qnXDBgT1HCoiw3FSAPQ=s176-c-k-c0x00ffffff-no-rj",
+  //       type: "image",
+  //       header: burakHeading,
+  //       seeMore: true,
+  //       duration: 1500,
+  //       seeMore: ({ close }) => {
+  //         return <div onClick={close}>Hello, click to close this.</div>;
+  //       },
+  //     },
+  //   ],
+  // },
   // Add more highlight objects as needed
 ];
 
 export default function page() {
+  const [showstory, setShowStory] = useState(false);
+  const [highlightsData, setHighlightsData] = useState(highlightData);
+
+  const handleHighlightClick = (index) => {
+    const updatedHighlightsData = [...highlightsData];
+    updatedHighlightsData[index].showStory = true;
+    setHighlightsData(updatedHighlightsData);
+  };
+
+  const handleCloseStory = (index) => {
+    const updatedHighlightsData = [...highlightsData];
+    updatedHighlightsData[index].showStory = false;
+    setHighlightsData(updatedHighlightsData);
+  };
+
+  useEffect(() => {
+    if (highlightsData.some((highlight) => highlight.showStory)) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [highlightsData]);
+
   return (
     <div className="md:justify-center flex flex-col items-center  ">
       <div className="flex space-x-4 items-center px-2 mb-3">
         <div className="flex space-x-4">
-          {highlightsData.map((highlight) => (
+          {highlightsData.map((highlight, index) => (
             <div
+              onClick={() => handleHighlightClick(index)}
               key={highlight.id}
               className="space-y-2 justify-center items-center rounded-full flex flex-col"
             >
@@ -99,12 +232,22 @@ export default function page() {
                 className="h-16 w-16 rounded-full border-2 border-double border-gray-200"
               />
               <p className="text-sm">{highlight.title}</p>
+              {highlight.showStory && (
+                <StoryHighlight
+                  title={highlight.title}
+                  story={highlight.stories}
+                  HideStory={() => handleCloseStory(index)}
+                />
+              )}
             </div>
           ))}
         </div>
       </div>
-      <div>
-        <ImageSlider images={post.imageUrls} />
+
+      <div className="md:justify-center flex-col items-center flex px-4">
+        {posts.map((post, index) => (
+          <PostCard post={post} key={index} />
+        ))}
       </div>
     </div>
   );
