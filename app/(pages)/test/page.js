@@ -3,7 +3,7 @@ import StoryHighlight from "./StoryHightlight.";
 
 import { useState } from "react";
 
-export default function page() {
+export default function Test() {
   const [showstory, setShowStory] = useState(false);
   return (
     <>

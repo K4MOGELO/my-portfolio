@@ -188,7 +188,7 @@ const highlightData = [
   // Add more highlight objects as needed
 ];
 
-export default function page() {
+export default function Page() {
   const [showstory, setShowStory] = useState(false);
   const [highlightsData, setHighlightsData] = useState(highlightData);
 
