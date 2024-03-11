@@ -8,18 +8,6 @@ const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const overlayRef = useRef(null);
 
-  const openFullscreen = (index) => {
-    setCurrentIndex(index);
-
-    setFullscreenImage(index);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeFullscreen = () => {
-    setFullscreenImage(null);
-    document.body.style.overflow = "auto";
-  };
-
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (fullscreenImage !== null) {
@@ -45,10 +33,10 @@ const ImageSlider = ({ images }) => {
   }, [fullscreenImage]);
   return (
     <div className="">
-      {images?.length > 0 ? (
+      {images.length > 0 ? (
         <Carousel showThumbs={false} swipeable={false}>
           {images.map((imageUrl, index) => (
-            <div key={index} onClick={() => openFullscreen(index)}>
+            <div key={index}>
               <Image
                 alt={`Gallery Image ${index + 1}`}
                 className="aspect-square object-cover border border-gray-200  rounded-lg overflow-hidden  transition-transform duration-200 "
@@ -61,19 +49,6 @@ const ImageSlider = ({ images }) => {
         </Carousel>
       ) : (
         <p className="text-center text-gray-500">No images available</p>
-      )}
-
-      {fullscreenImage !== null && (
-        <div
-          onClick={closeFullscreen}
-          className="fixed top-0 left-0 w-full h-full bg-black z-50 flex justify-center "
-        >
-          <img
-            alt={`Fullscreen Image ${currentIndex + 1}`}
-            src={images[currentIndex]}
-            className="object-contain"
-          />
-        </div>
       )}
     </div>
   );
