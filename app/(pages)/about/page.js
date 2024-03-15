@@ -14,14 +14,14 @@ function About() {
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Mission & Purpose</h2>
         <p className="">
-          Leverage technology to solve real-world problems and enhance people's
-          lives. I am driven by the belief that innovation and creativity can
-          pave the way for positive change in society. Through my work, I strive
-          to develop intuitive and user-friendly software solutions that empower
-          individuals and organizations to achieve their goals efficiently. I am
-          passionate about pushing the boundaries of what is possible with
-          technology, constantly seeking new challenges and opportunities to
-          learn and grow.
+          Leverage technology to solve real-world problems and enhance
+          people&rsquo;s lives. I am driven by the belief that innovation and
+          creativity can pave the way for positive change in society. Through my
+          work, I strive to develop intuitive and user-friendly software
+          solutions that empower individuals and organizations to achieve their
+          goals efficiently. I am passionate about pushing the boundaries of
+          what is possible with technology, constantly seeking new challenges
+          and opportunities to learn and grow.
         </p>
       </div>
       <div className="mb-8">
