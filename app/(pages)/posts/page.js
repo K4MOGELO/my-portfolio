@@ -10,8 +10,7 @@ const posts = [
     author: {
       name: "Kamogelo Sithole",
       profession: "Software Engineer",
-      avatarUrl:
-        "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
+      avatarUrl: "/images/home/myimage.jpeg",
     },
     timeAgo: "1d",
     content: ["testing...posts works?"],
@@ -31,8 +30,7 @@ const posts = [
     author: {
       name: "Kamogelo Sithole",
       profession: "Software Engineer",
-      avatarUrl:
-        "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
+      avatarUrl: "/images/home/myimage.jpeg",
     },
     timeAgo: "5d",
     content: [
@@ -53,7 +51,7 @@ const posts = [
     ],
   },
 ];
-const burakHeading = {
+const StoryHeading = {
   heading: "K4MOGELO",
   subheading: "16 february 2022",
   profileImage: "/images/gallery/image4.jpg",
@@ -69,7 +67,7 @@ const highlightData = [
       {
         url: "/images/gallery/image4.jpg",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
         seeMore: ({ close }) => {
           return <div onClick={close}>Hello, click to close this.</div>;
         },
@@ -77,7 +75,7 @@ const highlightData = [
       {
         url: "https://i.imgur.com/LBRXhIq.jpg",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
       },
     ],
   },
@@ -89,17 +87,17 @@ const highlightData = [
       {
         url: "https://i.imgur.com/Zo5Kpnd.mp4",
         type: "video",
-        header: burakHeading,
+        header: StoryHeading,
       },
       {
         url: "https://i.imgur.com/LBRXhIq.jpg",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
       },
       {
         url: "https://i.imgur.com/ARMxyC4.png",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
       },
     ],
   },
@@ -111,7 +109,7 @@ const highlightData = [
       {
         url: "https://i.imgur.com/in5Jr1h.jpg",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
         seeMore: true,
         duration: 1500,
         seeMore: ({ close }) => {
@@ -121,7 +119,7 @@ const highlightData = [
       {
         url: "/images/gallery/image4.jpg",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
         seeMore: ({ close }) => {
           return <div onClick={close}>Hello, click to close this.</div>;
         },
@@ -129,63 +127,20 @@ const highlightData = [
       {
         url: "https://i.imgur.com/Zo5Kpnd.mp4",
         type: "video",
-        header: burakHeading,
+        header: StoryHeading,
       },
       {
         url: "https://i.imgur.com/LBRXhIq.jpg",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
       },
       {
         url: "https://i.imgur.com/ARMxyC4.png",
         type: "image",
-        header: burakHeading,
+        header: StoryHeading,
       },
     ],
   },
-  {
-    id: 4,
-    imageUrl:
-      "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
-    title: "Highlight 1",
-    stories: [
-      {
-        url: "https://i.imgur.com/in5Jr1h.jpg",
-        type: "image",
-        header: burakHeading,
-        seeMore: true,
-        duration: 1500,
-        seeMore: ({ close }) => {
-          return <div onClick={close}>Hello, click to close this.</div>;
-        },
-      },
-
-      {
-        url: "/testvid.mp4",
-        type: "video",
-        header: burakHeading,
-      },
-    ],
-  },
-  // {
-  //   id: 5,
-  //   imageUrl:
-  //     "https://techcrunch.com/wp-content/uploads/2016/07/george-geohot-hotz.jpg",
-  //   title: "Highlight 2",
-  //   stories: [
-  //     {
-  //       url: "https://yt3.googleusercontent.com/ytc/AIdro_ns8epNsONIEqqJ-ICBD55qnXDBgT1HCoiw3FSAPQ=s176-c-k-c0x00ffffff-no-rj",
-  //       type: "image",
-  //       header: burakHeading,
-  //       seeMore: true,
-  //       duration: 1500,
-  //       seeMore: ({ close }) => {
-  //         return <div onClick={close}>Hello, click to close this.</div>;
-  //       },
-  //     },
-  //   ],
-  // },
-  // Add more highlight objects as needed
 ];
 
 export default function Page() {

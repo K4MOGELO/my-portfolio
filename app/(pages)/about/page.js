@@ -7,32 +7,29 @@ function About() {
   return (
     <div className="container mx-auto px-4 ">
       <p className="mb-8">
-        Inspired by{" "}
-        <Link
-          target="_blank"
-          href="https://leerob.io/"
-          className="text-blue-500 hover:underline"
-        >
-          Lee Robinson&rsquo;s
-        </Link>{" "}
-        portfolio, I decided to create one of my own. Here, I showcase my
-        skills, projects, and experiences, which have allowed me to delve deeper
-        into web development and explore various interesting features. This
-        portfolio isn&rsquo;t just a showcase, it&rsquo;s my creative sandbox
-        where I can experiment, innovate, and bring my ideas to life.
+        Having seen most tech dudes have some sort of web portfolio website, I
+        decided to have one of my own but more of a creative sandbox. I showcase
+        my skills, projects, and experiences, while also experimenting,
+        innovating, and bringing my ideas to life. So far, this has helped
+        improve my web development skills, so I want to add more intriguing
+        additions. Stay tuned.
       </p>
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">Mission & Purpose</h2>
-        <p className="text-gray-500">
-          My portfolio serves as a platform to bridge the gap between ideas and
-          execution. It&rsquo;s a space where I showcase my skills, projects,
-          and experiences, aiming to inspire and empower others in the tech
-          community.
+        <h2 className="text-2xl font-semibold mb-2">Mission & Purpose</h2>
+        <p className="">
+          Leverage technology to solve real-world problems and enhance people's
+          lives. I am driven by the belief that innovation and creativity can
+          pave the way for positive change in society. Through my work, I strive
+          to develop intuitive and user-friendly software solutions that empower
+          individuals and organizations to achieve their goals efficiently. I am
+          passionate about pushing the boundaries of what is possible with
+          technology, constantly seeking new challenges and opportunities to
+          learn and grow.
         </p>
       </div>
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">What Sets Me Apart</h2>
-        <p className="text-gray-500">
+        <h2 className="text-2xl font-semibold mb-2">What Sets Me Apart</h2>
+        <p className="">
           I believe in the power of innovation and collaboration. With a strong
           foundation in mathematical sciences and a keen interest in software
           engineering, I bring a unique perspective to every project. Whether
@@ -41,24 +38,18 @@ function About() {
         </p>
       </div>
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">Get in Touch</h2>
-        <p className="text-gray-500">
+        <h2 className="text-2xl font-semibold mb-2">Get in Touch</h2>
+        <p className="">
           Looking to collaborate on a project or discuss a potential
           opportunity? Feel free to reach out to me via email. I&rsquo;m always
           open to new challenges and eager to explore how we can work together
           to bring your ideas to life.
         </p>
-        <p className="text-gray-500 mb-4">
-          <strong>Contact Me:</strong> Email:{" "}
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
-        </p>
-      </div>
-      <div>
-        <p className="">
-          Thank you for taking the time to visit my portfolio. I&rsquo;m excited
-          about the possibilities that lie ahead and the opportunity to connect
-          with like-minded individuals in the tech community. Let&rsquo;s create
-          something extraordinary together!
+        <p className=" mb-4">
+          <strong>Contact Me: </strong>
+          <a href="mailto:sitholekamogelo07@gmail.com">
+            sitholekamogelo07@gmail.com
+          </a>
         </p>
       </div>
     </div>

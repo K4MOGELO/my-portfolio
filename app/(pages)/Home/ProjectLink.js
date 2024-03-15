@@ -1,20 +1,16 @@
 import Link from "next/link";
 import { Suspense } from "react";
 
-export default function BlogLink({ name, description }) {
+export default function ProjectLink({ name, description }) {
   return (
     <div className="group">
       <Link
         href={`/projects}`}
-        className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4 w-full"
+        className="border  border-neutral-700 bg-neutral-800 rounded flex items-center justify-between px-3 py-4 w-full"
       >
         <div className="flex flex-col">
-          <p className="font-medium text-neutral-900 dark:text-neutral-100">
-            {name}
-          </p>
-          <p className="text-neutral-600 dark:text-neutral-400">
-            {description}
-          </p>
+          <p className="font-medium  text-neutral-100">{name}</p>
+          <p className="text-neutral-400">{description}</p>
         </div>
         <div className="text-neutral-700 dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12">
           <ArrowIcon />

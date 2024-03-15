@@ -85,6 +85,7 @@ export default function Navbar() {
             </p>
           </Link>
         ))}
+        <p className="text-gray-600 cursor-not-allowed">blogs</p>
       </div>
     </div>
   );
