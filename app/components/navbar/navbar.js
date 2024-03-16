@@ -10,7 +10,6 @@ const navLinks = [
   { text: "projects", href: "/projects" },
   { text: "posts", href: "/posts" },
   { text: "about", href: "/about" },
-  // { text: "about", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -26,26 +25,19 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the current scroll position
       const scrollPosition = window.scrollY || window.pageYOffset;
 
-      // Check if the current scroll position is greater than the previous one
       if (scrollPosition > prevScrollPosition) {
-        // Scrolling down
         setIsScrollingUp(false);
       } else {
-        // Scrolling up
         setIsScrollingUp(true);
       }
 
-      // Update the previous scroll position
       setPrevScrollPosition(scrollPosition);
     };
 
-    // Attach the event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
 
-    // Detach the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

@@ -1,9 +1,8 @@
 "use client";
-import ImageSlider from "@/app/components/Posts/ImageSlider";
-import LinkedIn from "@/app/components/Posts/LinkedIn";
-import PostCard from "@/app/components/Posts/PostCard";
+
+import PostCard from "./PostCard";
 import React, { useEffect, useState } from "react";
-import StoryHighlight from "../test/StoryHightlight.";
+import StoryHighlight from "./StoryHightlight.";
 const posts = [
   {
     type: "status",

@@ -96,12 +96,6 @@ export default function PostCard({ post }) {
         <div>
           <ImageSlider images={post.imageUrls} />
         </div>
-
-        {/* <div className="flex flex-col">
-          {post.imageUrls.map((imageUrl, index) => (
-            <img src={imageUrl} key={index} alt={`post image`} className="" />
-          ))}
-        </div> */}
       </div>
     </div>
   );
