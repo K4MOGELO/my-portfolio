@@ -11,7 +11,7 @@ export default function HomePage() {
         <Avatar className="h-32 w-32">
           <AvatarImage
             alt="Profile picture"
-            src="/images/home/myimage.jpeg"
+            src="https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747521/MY%20WEBSITE/Home/myimage_ookcyh.jpg"
             className="object-cover"
           />
           <AvatarFallback>JP</AvatarFallback>
