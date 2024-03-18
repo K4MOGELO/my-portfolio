@@ -10,12 +10,29 @@ const posts = [
       name: "Kamogelo Sithole",
       profession: "Software Engineer",
       avatarUrl:
-        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747494/MY%20WEBSITE/posts/Highlights/image1_zgmvlm.jpg",
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747521/MY%20WEBSITE/Home/myimage_ookcyh.jpg",
     },
-    timeAgo: "1d",
+    timeAgo: "7d ago",
     content: ["testing...posts works?"],
     imageUrls: [
       "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710748477/MY%20WEBSITE/posts/Highlights/csir_is50mw.jpg",
+    ],
+  },
+  {
+    type: "status",
+    author: {
+      name: "Kamogelo Sithole",
+      profession: "Software Engineer",
+      avatarUrl:
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747521/MY%20WEBSITE/Home/myimage_ookcyh.jpg",
+    },
+    timeAgo: "December 2023",
+    content: [""],
+    imageUrls: [
+      "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751749/MY%20WEBSITE/posts/talkchpc3_obqvrz.jpg",
+      "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751658/MY%20WEBSITE/posts/talkchpc1_nfonfc.jpg",
+      "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751880/MY%20WEBSITE/posts/talkchpc4_qnt1bc.jpg",
+      "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751671/MY%20WEBSITE/posts/talkchpc2_zzfz5p.jpg",
     ],
   },
   // {
@@ -56,7 +73,7 @@ const StoryHeading = {
   heading: "K4MOGELO",
   subheading: "16 february 2022",
   profileImage:
-    "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747220/MY%20WEBSITE/posts/Highlights/IMG_6552_b1kz6i.jpg",
+    "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747521/MY%20WEBSITE/Home/myimage_ookcyh.jpg",
 };
 
 const highlightData = [
@@ -65,7 +82,7 @@ const highlightData = [
     name: "",
     imageUrl:
       "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747494/MY%20WEBSITE/posts/Highlights/image1_zgmvlm.jpg",
-    title: "HPC",
+    title: "Hightlight 1",
     stories: [
       {
         url: "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747494/MY%20WEBSITE/posts/Highlights/image1_zgmvlm.jpg",
@@ -86,7 +103,7 @@ const highlightData = [
     id: 2,
     imageUrl:
       "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747493/MY%20WEBSITE/posts/Highlights/usa_bph5am.png",
-    title: "USA",
+    title: "Hightlight 2",
     stories: [
       {
         url: "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747198/MY%20WEBSITE/posts/Highlights/IMG_6270_hkjli8.jpg",
@@ -114,7 +131,7 @@ const highlightData = [
     id: 3,
     imageUrl:
       "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747220/MY%20WEBSITE/posts/Highlights/IMG_6552_b1kz6i.jpg",
-    title: "Untitled 0",
+    title: "Untitled ",
     stories: [
       {
         url: "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747493/MY%20WEBSITE/posts/Highlights/jaden_c7vvo6.jpg",

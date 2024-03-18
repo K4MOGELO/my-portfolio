@@ -29,6 +29,14 @@ export default function page() {
         "All in one website to help freshers find their way around the campus and get access to all services ",
       languages: ["NextJS"],
     },
+    {
+      name: "ULDEV SOCIETY WEBSITE",
+      image:
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710749646/MY%20WEBSITE/projects/Screenshot_2024-03-18_101222_npcsur.png",
+      description:
+        "Created website for UL developer society to show their work and display some of their content to increase their social media what what warra warra",
+      languages: ["React", "Node.js", "Mongoose"],
+    },
   ];
   return (
     <div className=" p-6">

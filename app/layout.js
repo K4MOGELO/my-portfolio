@@ -1,5 +1,5 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Inter } from "next/font/google";
+import "./globals.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`  bg-black  text-white ${inter.className}   `}>
         <Navbar />
-
         <div className="min-h-screen ">
           <div className="p-14 "></div>
           {children}
@@ -25,7 +24,8 @@ export default function RootLayout({ children }) {
             className=" space-x-1  border-b border-dashed border-white"
             title="website under development,STAY TUNED  "
           >
-            Website in <span className="text-yellow-500">Beta Mode</span>{" "}
+            Website in <span className="text-yellow-500">Beta Mode</span> ,still
+            fixing stuff
           </span>
         </div>
         <Footer />

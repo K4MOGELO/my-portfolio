@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ProjectCard({ image, name, description, languages }) {
   return (
-    <Link href="#" className="shadow-md  rounded-md p-4 border border-gray-900">
+    <Link href="" className="shadow-md  rounded-md p-4 border border-gray-900">
       <img
         src={image}
         alt={name}
