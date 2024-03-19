@@ -3,63 +3,25 @@ import React from "react";
 import { useState } from "react";
 import Stories from "react-insta-stories";
 
-export default function StoryHighlight({ title, HideStory, story }) {
-  const burakHeading = {
-    heading: "K4MOGELO",
-    subheading: "16 february 2022",
-    profileImage: "/images/gallery/image4.jpg",
-  };
-
-  const initialStories = [
-    {
-      url: "https://i.imgur.com/in5Jr1h.jpg",
-      type: "image",
-      header: burakHeading,
-      seeMore: true,
-      duration: 1500,
-      seeMore: ({ close }) => {
-        return <div onClick={close}>Hello, click to close this.</div>;
-      },
-    },
-    {
-      url: "/images/gallery/image4.jpg",
-      type: "image",
-      header: burakHeading,
-      seeMore: ({ close }) => {
-        return <div onClick={close}>Hello, click to close this.</div>;
-      },
-    },
-    {
-      url: "https://i.imgur.com/Zo5Kpnd.mp4",
-      type: "video",
-      header: burakHeading,
-    },
-    {
-      url: "https://i.imgur.com/LBRXhIq.jpg",
-      type: "image",
-      header: burakHeading,
-    },
-    {
-      url: "https://i.imgur.com/ARMxyC4.png",
-      type: "image",
-      header: burakHeading,
-    },
-  ];
+export default function StoryHighlight({ title, story, index, HideStory }) {
   const storyContent = {
     width: "auto",
     maxWidth: "100%",
     maxHeight: "100%",
     margin: "auto",
   };
-  const onAllStoriesEndHandler = () => {
-    HideStory(false);
-  };
-  const [stories, setStories] = useState(story);
 
+  const [stories] = useState(story);
+  const onAllStoriesEndHandler = () => {
+    HideStory();
+    console.log("close this");
+  };
   return (
-    <div className=" fixed flex top-0 left-0 right-0 w-screen h-screen z-50  bg-black flex-col items-center">
-      <div>
-        <h1>{title} Highlights</h1>
+    <div className="  fixed flex top-0 left-0 right-0 w-screen h-screen z-50  bg-black flex-col items-center">
+      <div className=" w-96 flex  justify-between p-2">
+        <h1>{title}</h1>
+
+        <h1 onClick={onAllStoriesEndHandler}>close(doesnt work currently)</h1>
       </div>
 
       <Stories

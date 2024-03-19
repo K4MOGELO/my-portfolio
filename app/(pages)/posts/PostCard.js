@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ImageSlider from "./ImageSlider";
+import Image from "next/image";
 
 export default function PostCard({ post }) {
   const [expanded, setExpanded] = useState(false);
@@ -19,7 +20,9 @@ export default function PostCard({ post }) {
       <div className=" border-gray-200 px-2">
         <div className="flex items-center justify-between space-x-4 my-2">
           <div className="flex items-center space-x-2">
-            <img
+            <Image
+              height={300}
+              width={300}
               src={post.author.avatarUrl}
               alt="highlight"
               className="h-16 w-16 rounded-full border-2 border-double border-gray-200"
@@ -53,7 +56,9 @@ export default function PostCard({ post }) {
             <div className="  ">
               <div className="flex items-center justify-between space-x-4 my-2">
                 <div className="flex items-center space-x-2">
-                  <img
+                  <Image
+                    width={300}
+                    height={300}
                     src={post.originalAuthor.avatarUrl}
                     alt="highlight"
                     className="h-16 w-16 rounded-full border-2 border-double border-gray-200"
@@ -96,6 +101,12 @@ export default function PostCard({ post }) {
         <div>
           <ImageSlider images={post.imageUrls} />
         </div>
+
+        {/* <div className="flex flex-col">
+          {post.imageUrls.map((imageUrl, index) => (
+            <img src={imageUrl} key={index} alt={`post image`} className="" />
+          ))}
+        </div> */}
       </div>
     </div>
   );
