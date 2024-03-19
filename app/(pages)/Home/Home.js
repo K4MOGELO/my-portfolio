@@ -1,21 +1,24 @@
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
+import { Avatar } from "@/components/ui/avatar";
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import ProjectLink from "./ProjectLink";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center p-6 space-y-8">
       <div className="flex items-center gap-4">
-        <Avatar className="h-32 w-32">
-          <AvatarImage
-            alt="Profile picture"
+        <div className="h-32 w-32  flex shrink-0 overflow-hidden rounded-full">
+          <Image
+            width={300}
+            height={300}
             src="https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747521/MY%20WEBSITE/Home/myimage_ookcyh.jpg"
-            className="object-cover"
+            alt="KS"
+            className="object-cover  "
           />
-          <AvatarFallback>JP</AvatarFallback>
-        </Avatar>
+        </div>
+
         <div className="grid gap-2 text-lg">
           <h2 className="font-bold text-3xl">K4MOGELO</h2>
           <div className="text-gray-500">Software Engineer</div>

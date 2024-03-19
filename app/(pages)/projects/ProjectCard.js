@@ -1,13 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ProjectCard({ image, name, description, languages }) {
   return (
     <Link href="" className="shadow-md  rounded-md p-4 border border-gray-900">
-      <img
+      <Image
+        width={300}
+        height={300}
         src={image}
         alt={name}
-        className="w-full h-60 object-cover rounded-md mb-4"
+        className="w-full h-60 object-cover rounded-md  "
       />
+
       <div className="flex flex-col justify-between">
         <div>
           <h2 className="text-xl font-semibold mb-2">{name}</h2>
