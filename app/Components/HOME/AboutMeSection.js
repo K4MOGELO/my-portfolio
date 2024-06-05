@@ -28,7 +28,7 @@ export default function AboutMeSection() {
           <h3 className="font-semibold text-lg ">Skills</h3>
           <div className="">
             {skills.map((skill, index) => (
-              <Badge id={index} className="text-white">
+              <Badge key={index} className="text-white">
                 {skill}
               </Badge>
             ))}
