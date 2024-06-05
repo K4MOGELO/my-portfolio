@@ -64,7 +64,7 @@ export default function HomePage() {
               <Badge>C </Badge>
               <Badge>React</Badge>
               <Badge>Node.js</Badge>
-              <Badge>Java</Badge>
+              <Badge>GO</Badge>
               <Badge>Python</Badge>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function HomePage() {
                   description="web app to help students find accomodation"
                 />
                 <ProjectLink
-                  name="This Website ,LOL"
+                  name="This Website"
                   description="my personal website"
                 />
               </div>

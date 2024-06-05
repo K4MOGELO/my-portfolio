@@ -3,14 +3,14 @@ import React from "react";
 function About() {
   return (
     <div className="container mx-auto px-4 ">
-      <p className="mb-8">
+      {/* <p className="mb-8">
         Having seen most tech dudes have some sort of web portfolio website, I
         decided to have one of my own but more of a creative sandbox. I showcase
         my skills, projects, and experiences, while also experimenting,
         innovating, and bringing my ideas to life. So far, this has helped
         improve my web development skills, so I want to add more intriguing
         additions. Stay tuned.
-      </p>
+      </p> */}
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Mission & Purpose</h2>
         <p className="">

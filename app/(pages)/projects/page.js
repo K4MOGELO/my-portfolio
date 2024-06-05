@@ -17,7 +17,7 @@ export default function page() {
       image:
         "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747477/MY%20WEBSITE/projects/pronav_jfoapt.png",
       description:
-        "Web apllication to help students find  accomodation at university of limpopo showing all the prices and images4",
+        "Web apllication to help students find  accomodation at university of limpopo showing all the prices and images",
       languages: ["NextJS", "Firebase", "ClerkAuth"],
     },
     {

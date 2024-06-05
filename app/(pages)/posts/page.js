@@ -41,7 +41,7 @@ const posts = [
   //     name: "Katlego W. Phoshoko, PhD",
   //     profession: "Principal Systems Scientist | HP...",
   //     avatarUrl:
-  //       "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747502/MY%20WEBSITE/posts/Highlights/drphoshoko_ojhhse.jpg",
+  //       "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747502/MY%20WEBSITE/posts/posts/xvfzz4uhqxgokqemool3",
   //   },
 
   //   author: {
@@ -93,7 +93,7 @@ export default function Page() {
 
   return (
     <div className="md:justify-center flex flex-col items-center  ">
-      <Highlight />
+      {/* <Highlight /> */}
       <div className="md:justify-center flex-col items-center flex px-4">
         {posts.map((post, index) => (
           <PostCard post={post} key={index} />
