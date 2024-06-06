@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon, LinkedinIcon, MailIcon } from "../icons/SociealMedia";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function ProfileSection() {
   return (
@@ -11,10 +12,10 @@ export default function ProfileSection() {
           height={300}
           src="https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747521/MY%20WEBSITE/Home/myimage_ookcyh.jpg"
           alt="KS"
+          loading="lazy"
           className="object-cover  "
         />
       </div>
-
       <div className="grid gap-2 text-lg">
         <h2 className="font-bold text-3xl">K4MOGELO</h2>
         <div className="text-gray-500">Software Engineer</div>
