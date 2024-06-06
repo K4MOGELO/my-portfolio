@@ -4,7 +4,7 @@ import HOME from "./(pages)/HOME/page";
 export default function Home() {
   return (
     <div>
-      <HOME />11
+      <HOME />
     </div>
   );
 }

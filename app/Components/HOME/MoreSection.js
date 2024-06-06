@@ -4,7 +4,7 @@ import React from "react";
 
 export default function MoreSection() {
   return (
-    <Card className="w-full max-w-2xl">
+    <Card id="test" className="w-full max-w-2xl">
       <CardHeader>
         <CardTitle>More...</CardTitle>
       </CardHeader>
