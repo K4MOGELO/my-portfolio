@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export default function page() {
+export default function Page() {
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpanded = () => {
@@ -49,7 +49,7 @@ export default function page() {
   return (
     <div className="  flex flex-col items-center   ">
       {posts.map((post, index) => (
-        <Card className="w-full max-w-xl m-4">
+        <Card key={index} className="w-full max-w-xl m-4">
           <CardHeader>
             <div className="flex items-center justify-between space-x-4 ">
               <div className="flex items-center space-x-2">
