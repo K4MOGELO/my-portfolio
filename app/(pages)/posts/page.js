@@ -29,9 +29,40 @@ export default function Page() {
   const posts = [
     {
       type: "status",
+      date: " 2",
+      content: ["moscow hackathon preparation"],
+      imageUrls: [
+        "https://res.cloudinary.com/dnp6z6i4u/video/upload/v1717576284/MY%20WEBSITE/posts/posts/xvfzz4uhqxgokqemool3.mp4",
+      ],
+    },
+    {
+      type: "status",
+      date: "7d ago",
+      content: [""],
+      imageUrls: [
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747493/MY%20WEBSITE/posts/Highlights/jaden_c7vvo6.jpg",
+      ],
+    },
+    {
+      type: "status",
 
       date: "7d ago",
-      content: ["testing...posts works?"],
+      content: [
+        "Having previously competed in the International Student Cluster Competition, I was invited to accompany this year's CHPC team to help set up their cluster for ISC24 in Cape Town.",
+        "I had the pleasure of visiting some companies like DIPLOMICS, where we had discussions about omics, and Tsolo, where we discussed data storage and its manufacturing process.",
+        "We then visited SARAO, where we learned about the MeerKAT Radio Telescope project in depth. Lastly, we visited CSIR's CHPC, where we were building a computer cluster.",
+      ],
+      imageUrls: [
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1717577230/MY%20WEBSITE/posts/posts/u8w63ew1dz6owq6noq8r.jpg",
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1717577223/MY%20WEBSITE/posts/posts/nihcqo2zagcxvgymg1ew.jpg",
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1717947727/MY%20WEBSITE/posts/posts/qrobl8aob6jnzr7thiql.jpg",
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1717577215/MY%20WEBSITE/posts/posts/fgk1ldbgraxxn0mbsgne.jpg",
+      ],
+    },
+    {
+      type: "status",
+      date: "7d ago",
+      content: ["mhh"],
       imageUrls: [
         "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710748477/MY%20WEBSITE/posts/Highlights/csir_is50mw.jpg",
       ],
@@ -39,8 +70,9 @@ export default function Page() {
     {
       type: "status",
       date: "7d ago",
-      content: ["caption will be here"],
+      content: ["CHPC National Conference"],
       imageUrls: [
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751749/MY%20WEBSITE/posts/talkchpc3_obqvrz.jpg",
         "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751658/MY%20WEBSITE/posts/talkchpc1_nfonfc.jpg",
         "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751880/MY%20WEBSITE/posts/talkchpc4_qnt1bc.jpg",
         "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751671/MY%20WEBSITE/posts/talkchpc2_zzfz5p.jpg",
@@ -65,6 +97,7 @@ export default function Page() {
                 <div>
                   <h1 className="text-md font-semibold">{author.name}</h1>
                   <h2 className="text-sm text-gray-600">{author.profession}</h2>
+                  {/* <h2 className="text-sm text-gray-600">{post.date}</h2> */}
                 </div>
               </div>
             </div>
@@ -154,19 +187,52 @@ export function ImageCarousel({ images }) {
     };
   }, [fullscreenImage]);
 
+  function checkMediaType(url) {
+    const imageExtensions = [
+      "jpg",
+      "jpeg",
+      "png",
+      "gif",
+      "bmp",
+      "webp",
+      "tiff",
+    ];
+    const videoExtensions = ["mp4", "avi", "mov", "wmv", "flv", "webm", "mkv"];
+
+    const urlParts = url.split(".");
+    const extension = urlParts[urlParts.length - 1].toLowerCase();
+
+    if (imageExtensions.includes(extension)) {
+      return "image";
+    } else if (videoExtensions.includes(extension)) {
+      return "video";
+    } else {
+      return "unknown";
+    }
+  }
+
   return (
     <div>
       <Carousel setApi={setApi} className="w-full ">
         <CarouselContent>
-          {images.map((image, index) => (
+          {images.map((media, index) => (
             <CarouselItem key={index} onClick={() => openFullscreen(index)}>
               <Card>
-                <Image
-                  className="aspect-square object-cover rounded-lg overflow-hidden  transition-transform duration-200 "
-                  height="900"
-                  src={image}
-                  width="900"
-                />
+                {checkMediaType(media) === "image" ? (
+                  <Image
+                    className="aspect-square object-cover rounded-lg overflow-hidden  transition-transform duration-200 "
+                    height="900"
+                    src={media}
+                    width="900"
+                  />
+                ) : (
+                  <iframe
+                    src={media}
+                    frameborder="0"
+                    className="h-96 w-full flex justify-center items-center"
+                    allowfullscreen
+                  />
+                )}
               </Card>
             </CarouselItem>
           ))}
