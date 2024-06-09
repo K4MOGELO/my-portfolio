@@ -17,7 +17,6 @@ export default function ProfileSection() {
         />
       </div>
       <div className="grid gap-2 text-lg">
-        <Link href="#test">click me</Link>
         <h2 className="font-bold text-3xl">K4MOGELO</h2>
         <div className="text-gray-500">Software Engineer</div>
         <div className="flex gap-2">

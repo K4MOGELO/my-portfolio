@@ -13,15 +13,16 @@ export default function AboutMeSection() {
         <div className="space-y-2">
           <p>
             I&rsquo;m a final-year student at the University of Limpopo,
-            dedicated to pursuing a BSc in Mathematical Sciences with focus on
-            Computer Sciences and Applied Mathematics.
+            pursuing a BSc in Mathematical Sciences with a focus on Computer
+            Science and Applied Mathematics.
           </p>
           <p>
-            With recent interests in High-Performance Computing (HPC),
-            I&rsquo;ve been focusing on improving my system administration
-            skills and scripting abilities. At the same time, I&rsquo;ve been
-            working on web development, utilizing frameworks such as Next.js and
-            Express.js to explore new avenues in the digital realm.
+            As a power user, I actively develop tools to enhance the efficiency
+            and functionality of my Linux system, leveraging scripting languages
+            such as Bash and Python. Additionally, I am passionate about
+            building innovative web and mobile applications that address
+            real-world challenges, using JavaScript libraries like React and
+            frameworks like Next.js to create robust and dynamic solutions.
           </p>
         </div>
         <div className="space-y-1">

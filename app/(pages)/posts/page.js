@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Highlights from "@/app/Components/POSTS/Highlights";
 
 export default function Page() {
   const [expanded, setExpanded] = useState(false);
@@ -48,6 +49,7 @@ export default function Page() {
   ];
   return (
     <div className="  flex flex-col items-center   ">
+      {/* <Highlights /> */}
       {posts.map((post, index) => (
         <Card key={index} className="w-full max-w-xl m-4">
           <CardHeader>
@@ -63,7 +65,6 @@ export default function Page() {
                 <div>
                   <h1 className="text-md font-semibold">{author.name}</h1>
                   <h2 className="text-sm text-gray-600">{author.profession}</h2>
-                  <h2 className="text-sm text-gray-600">dddd</h2>
                 </div>
               </div>
             </div>
@@ -177,9 +178,12 @@ export function ImageCarousel({ images }) {
           </>
         )}
       </Carousel>
-      <div className="py-2 text-center text-sm text-muted-foreground">
-        image {current} of {count}
-      </div>
+      {count > 1 && (
+        <div className="mt-2 text-center text-sm text-muted-foreground">
+          image {current} of {count}
+        </div>
+      )}
+
       {fullscreenImage !== null && (
         <div
           onClick={closeFullscreen}
