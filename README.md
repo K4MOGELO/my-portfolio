@@ -2,7 +2,7 @@
 
 My portfolio website showcasing my skills, projects, and experience.
 
-Visit website at [kamogelo.vercel.app](https://kamogelo.vercel.app/).
+Visit website at [kamogelosithole.xyz](https://kamogelosithole.xyz)
 
 ![Project Image](https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747476/MY%20WEBSITE/projects/website_sqarak.png)
 
