@@ -1,24 +1,10 @@
-"use client";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Highlights from "@/app/Components/POSTS/Highlights";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { ImageCarousel } from "./ImageCarousel";
+import PostContent from "./PostContent";
 
 export default function Page() {
-  const [expanded, setExpanded] = useState(false);
-
-  const toggleExpanded = () => {
-    setExpanded(!expanded);
-  };
-
   const author = {
     name: "Kamogelo Sithole",
     profession: "Software Engineer",
@@ -28,7 +14,6 @@ export default function Page() {
 
   const posts = [
     {
-      type: "status",
       date: " 2",
       content: ["moscow hackathon preparation"],
       imageUrls: [
@@ -36,7 +21,17 @@ export default function Page() {
       ],
     },
     {
-      type: "status",
+      date: "7d ago",
+      content: ["Being one of the founders of the developer society at the University of Limpopo, we regularly host events for students, bringing in industry experts from different career fields to inspire and provide our students with insights on how they started and how to succeed."],
+      imageUrls: [
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1718031559/MY%20WEBSITE/posts/e7nzzvf6kgb7vewn6b8t.jpg",
+        "https://res.cloudinary.com/dnp6z6i4u/video/upload/v1718031556/MY%20WEBSITE/posts/l1lpwkapjghuzeszwyma.mp4",
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1718031748/MY%20WEBSITE/posts/qoxl92j04n4utle1jpzb.jpg",
+      ],
+    },
+
+
+    {
       date: "7d ago",
       content: [""],
       imageUrls: [
@@ -44,7 +39,6 @@ export default function Page() {
       ],
     },
     {
-      type: "status",
 
       date: "7d ago",
       content: [
@@ -60,7 +54,6 @@ export default function Page() {
       ],
     },
     {
-      type: "status",
       date: "7d ago",
       content: ["mhh"],
       imageUrls: [
@@ -68,7 +61,6 @@ export default function Page() {
       ],
     },
     {
-      type: "status",
       date: "7d ago",
       content: ["CHPC National Conference"],
       imageUrls: [
@@ -78,12 +70,23 @@ export default function Page() {
         "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710751671/MY%20WEBSITE/posts/talkchpc2_zzfz5p.jpg",
       ],
     },
+    {
+      date: "7d ago",
+      content: ["I was awarded an incredible opportunity to travel and undergo training at Dell Headquarters in Texas, USA, and the Texas Advanced Computing Center (TACC) in preparation for the ISC Student Cluster Competition hosted in Hamburg, Germany.", "We engaged in hands-on sessions with HPC experts, designed theoretical clusters addressing real-world challenges, and had in-depth discussions on the components of efficient cluster design. "],
+      imageUrls: [
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1718030862/MY%20WEBSITE/posts/wx2l0coryci5lvxfejo9.jpg",
+        "https://res.cloudinary.com/dnp6z6i4u/video/upload/v1710748191/MY%20WEBSITE/posts/Highlights/0318_ao5tt9.mp4",
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1718030524/MY%20WEBSITE/posts/wbjhrgptfhsadkwnkt2f.jpg",
+        "https://res.cloudinary.com/dnp6z6i4u/video/upload/v1718030503/MY%20WEBSITE/posts/oueguhk2kwmnto2tpvho.mp4",
+        "https://res.cloudinary.com/dnp6z6i4u/image/upload/v1710747198/MY%20WEBSITE/posts/Highlights/IMG_6270_hkjli8.jpg",
+      ],
+    },
+
   ];
   return (
     <div className="  flex flex-col items-center   ">
-      {/* <Highlights /> */}
       {posts.map((post, index) => (
-        <Card key={index} className="w-full max-w-xl m-4">
+        <Card key={index} className="w-full max-w-xl ">
           <CardHeader>
             <div className="flex items-center justify-between space-x-4 ">
               <div className="flex items-center space-x-2">
@@ -103,22 +106,7 @@ export default function Page() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4 text-base leading-relaxed p-2">
-              {post.content
-                .slice(0, expanded ? post.content.length : 1)
-                .map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
-                ))}
-              {post.content.length > 1 && (
-                <button
-                  onClick={toggleExpanded}
-                  className="text-blue-500 hover:text-blue-700"
-                >
-                  {expanded ? "Read Less" : "Read More"}
-                </button>
-              )}
-            </div>
-
+            <PostContent content={post.content} />
             <div className="w-full">
               <ImageCarousel images={post.imageUrls} />
             </div>
@@ -129,140 +117,4 @@ export default function Page() {
   );
 }
 
-export function ImageCarousel({ images }) {
-  const [api, setApi] = useState();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
 
-  React.useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
-
-  const [fullscreenImage, setFullscreenImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const overlayRef = useRef(null);
-
-  const openFullscreen = (index) => {
-    setCurrentIndex(index);
-
-    setFullscreenImage(index);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeFullscreen = () => {
-    setFullscreenImage(null);
-    document.body.style.overflow = "auto";
-  };
-
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (fullscreenImage !== null) {
-        if (event.key === "Escape") {
-          closeFullscreen();
-        }
-      }
-    };
-
-    const handleOverlayClick = (event) => {
-      if (event.target === overlayRef.current) {
-        closeFullscreen();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyPress);
-    overlayRef.current?.addEventListener("click", handleOverlayClick);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-      overlayRef.current?.removeEventListener("click", handleOverlayClick);
-    };
-  }, [fullscreenImage]);
-
-  function checkMediaType(url) {
-    const imageExtensions = [
-      "jpg",
-      "jpeg",
-      "png",
-      "gif",
-      "bmp",
-      "webp",
-      "tiff",
-    ];
-    const videoExtensions = ["mp4", "avi", "mov", "wmv", "flv", "webm", "mkv"];
-
-    const urlParts = url.split(".");
-    const extension = urlParts[urlParts.length - 1].toLowerCase();
-
-    if (imageExtensions.includes(extension)) {
-      return "image";
-    } else if (videoExtensions.includes(extension)) {
-      return "video";
-    } else {
-      return "unknown";
-    }
-  }
-
-  return (
-    <div>
-      <Carousel setApi={setApi} className="w-full ">
-        <CarouselContent>
-          {images.map((media, index) => (
-            <CarouselItem key={index} onClick={() => openFullscreen(index)}>
-              <Card>
-                {checkMediaType(media) === "image" ? (
-                  <Image
-                    className="aspect-square object-cover rounded-lg overflow-hidden  transition-transform duration-200 "
-                    height="900"
-                    src={media}
-                    width="900"
-                  />
-                ) : (
-                  <iframe
-                    src={media}
-                    frameborder="0"
-                    className="h-96 w-full flex justify-center items-center"
-                    allowfullscreen
-                  />
-                )}
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        {count > 1 && (
-          <>
-            <CarouselPrevious />
-            <CarouselNext />
-          </>
-        )}
-      </Carousel>
-      {count > 1 && (
-        <div className="mt-2 text-center text-sm text-muted-foreground">
-          image {current} of {count}
-        </div>
-      )}
-
-      {fullscreenImage !== null && (
-        <div
-          onClick={closeFullscreen}
-          className="fixed top-0 left-0 w-full h-full bg-black z-50 flex justify-center "
-        >
-          <Image
-            fill
-            alt={`Fullscreen Image ${currentIndex + 1}`}
-            src={images[currentIndex]}
-            className="object-contain"
-          />
-        </div>
-      )}
-    </div>
-  );
-}
